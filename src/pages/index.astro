@@ -1,14 +1,12 @@
 
-
 ---
-import Layout from '../layouts/Layout.astro';
+// This area is the "fence". It stays private.
+const lastUpdated = new Date().toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
 ---
-<Layout title="QRLTT | Homelab Gateway">
-  <h1>System Online</h1>
----
-// src/pages/index.astro
----
-
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -17,57 +15,41 @@ import Layout from '../layouts/Layout.astro';
     <style>
       body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; background: #111; color: #ddd; }
       h1 { color: #fff; border-bottom: 2px solid #4ade80; padding-bottom: 0.5rem; }
-      h2 { color: #4ade80; margin-top: 2rem; }
+      h2 { color: #4ade80; margin-top: 2rem; border-left: 4px solid #4ade80; padding-left: 10px; }
       .card { background: #222; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid #333; }
-      .status-green { color: #4ade80; font-weight: bold; }
-      .tag { background: #333; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.9rem; margin-right: 0.5rem; }
+      .tag { background: #1e293b; color: #94a3b8; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem; border: 1px solid #334155; }
       a { color: #4ade80; text-decoration: none; }
+      .timestamp { color: #666; font-size: 0.8rem; margin-top: 2rem; font-style: italic; }
     </style>
   </head>
   <body>
     <header>
-      <h1>INTP / Homelab Engineer</h1>
+      <h1>Homelab & Aspiring Cloud Engineer</h1>
       <p>Transitioning from Customer Service to Cloud Administration & Cybersecurity.</p>
     </header>
 
     <main>
       <section>
-        <h2>🚀 Active Projects</h2>
-        
+        <h2>🚀 Infrastructure & Projects</h2>
         <div class="card">
-          <h3>Homelab Infrastructure</h3>
-          <p>Self-hosted environment running on local hardware via Cloudflare Tunnels.</p>
-          <p><span class="status-green">● Live</span> at <a href="https://qrltt.com">qrltt.com</a></p>
+          <h3>Professional Portfolio</h3>
+          <p>Built with Astro and deployed via Cloudflare Pages with a CI/CD pipeline from GitHub.</p>
           <div style="margin-top: 10px;">
-            <span class="tag">Docker</span>
-            <span class="tag">Cloudflare Zero Trust</span>
-            <span class="tag">Ubuntu</span>
-            <span class="tag">Astro</span>
+            <span class="tag">Astro</span> <span class="tag">Cloudflare Pages</span> <span class="tag">CI/CD</span>
           </div>
         </div>
 
         <div class="card">
-          <h3>Nissan Y11 Modernization</h3>
-          <p>Restoring and upgrading a 2001 Nissan Y11 with modern tech integration.</p>
-          <p><em>Status: Head Gasket Repair (Hybrid DIY)</em></p>
+          <h3>Project Y11</h3>
+          <p>Modernizing a 2001 Nissan Y11. Blending mechanical restoration with modern tech.</p>
         </div>
       </section>
 
-      <section>
-        <h2>🛠 Skills & Tools</h2>
-        <ul>
-          <li><strong>Cloud:</strong> Cloudflare (Tunnels, Pages, DNS), SSH Remote Management</li>
-          <li><strong>Code:</strong> Python (Automation), HTML/CSS, Astro</li>
-          <li><strong>Networking:</strong> DNS Management, Port Forwarding, Secure Tunneling</li>
-        </ul>
-      </section>
-
       <footer>
-  <hr />
-  <p>© 2025 QRLTT | <a href="mailto:admin@qrltt.com">Contact Me</a></p>
-</footer>
-
+        <hr style="border: 0; border-top: 1px solid #333;" />
+        <p>© 2025 QRLTT | <a href="mailto:me@qrltt.com">Contact Me</a></p>
+        <p class="timestamp">Last Deployment: {lastUpdated}</p>
+      </footer>
     </main>
   </body>
-</html>
 </html>
