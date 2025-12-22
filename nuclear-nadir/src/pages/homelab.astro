@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Build Log">
+  <h1>Homelab Build Log</h1>
+
+  <div class="card">
+    <h3>Phase 1: The Foundation <span class="tag done">COMPLETED</span></h3>
+    <p><strong>Hardware:</strong> Replaced Windows with Debian 12 (Bookworm).</p>
+    <p><strong>Network:</strong> Configured Cloudflare Zero Trust Tunnel (Host Mode).</p>
+    <p><strong>Result:</strong> No open ports, full SSL encryption, globally accessible.</p>
+  </div>
+
+  <div class="card">
+    <h3>Phase 2: Core Services <span class="tag done">COMPLETED</span></h3>
+    <p>Deployed Docker containers for:</p>
+    <ul>
+      <li><strong>Nextcloud:</strong> 512MB RAM Limit optimized.</li>
+      <li><strong>Home Assistant:</strong> Local network discovery active.</li>
+      <li><strong>Nginx:</strong> Serving this resume site.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Phase 3: Automation <span class="tag wip">IN PROGRESS</span></h3>
+    <p>Connecting smart plugs and temperature sensors to Home Assistant.</p>
+  </div>
+</Layout>
