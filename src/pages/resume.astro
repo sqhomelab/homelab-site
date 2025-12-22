@@ -1,21 +1,79 @@
 ---
-import Layout from '../layouts/Layout.astro';
+// src/pages/index.astro
 ---
-<Layout title="Resume">
-  <h1>My Resume</h1>
 
-  <div class="card">
-    <h2>Professional Profile</h2>
-    <p>IT professional specializing in Linux administration, Docker containerization, and Cloudflare networking.</p>
-  </div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>QRLTT | Cloud & Homelab</title>
+    <style>
+      body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 2rem; background: #111; color: #ddd; }
+      h1 { color: #fff; border-bottom: 2px solid #4ade80; padding-bottom: 0.5rem; }
+      h2 { color: #4ade80; margin-top: 2rem; border-left: 4px solid #4ade80; padding-left: 10px; }
+      .card { background: #222; padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; border: 1px solid #333; }
+      .status-green { color: #4ade80; font-weight: bold; }
+      .status-yellow { color: #facc15; font-weight: bold; }
+      .tag { background: #1e293b; color: #94a3b8; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; margin-right: 0.5rem; border: 1px solid #334155; }
+      a { color: #4ade80; text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      ul { line-height: 1.6; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>INTP / Homelab Engineer</h1>
+      <p>Transitioning from Customer Service to Cloud Administration & Cybersecurity.</p>
+    </header>
 
-  <div class="card">
-    <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Linux:</strong> Debian 12, CLI Management, Permissions/Ownership.</li>
-      <li><strong>Containerization:</strong> Docker, Docker Compose, Volume Management.</li>
-      <li><strong>Networking:</strong> Cloudflare Tunnels, DNS, SSL/TLS, CGNAT Bypass.</li>
-      <li><strong>Web:</strong> Astro, HTML/CSS, Nginx.</li>
-    </ul>
-  </div>
-</Layout>
+    <main>
+      <section>
+        <h2>🚀 Infrastructure & Projects</h2>
+        
+        <div class="card">
+          <h3>Professional Portfolio (This Site)</h3>
+          <p>Built with Astro and deployed via Cloudflare Pages with a CI/CD pipeline from GitHub.</p>
+          <p><span class="status-green">● Live</span> at <a href="https://qrltt.com">qrltt.com</a></p>
+          <div style="margin-top: 10px;">
+            <span class="tag">Astro</span>
+            <span class="tag">Cloudflare Pages</span>
+            <span class="tag">Git/GitHub</span>
+            <span class="tag">CI/CD</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Local Homelab Environment</h3>
+          <p>Running Ubuntu Server on local hardware. Exposed securely via Cloudflare Zero Trust Tunnels (No open ports).</p>
+          <p><span class="status-green">● Operational</span></p>
+          <div style="margin-top: 10px;">
+            <span class="tag">Ubuntu Server</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Cloudflare Tunnels</span>
+            <span class="tag">SSH</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Project Y11: Modernization</h3>
+          <p>Restoring and upgrading a 2001 Nissan Y11. Blending mechanical restoration with modern tech.</p>
+          <p><span class="status-yellow">● Phase 2</span>: <em>Head Gasket & Cooling System Overhaul</em></p>
+        </div>
+      </section>
+
+      <section>
+        <h2>🛠 Technical Stack</h2>
+        <ul>
+          <li><strong>Cloud & Networking:</strong> DNS Management, Cloudflare Zero Trust, iCloud+ Custom Domains, Firewall Rules.</li>
+          <li><strong>Systems:</strong> Debian/Ubuntu Linux, Bash Scripting, Package Management.</li>
+          <li><strong>Web:</strong> HTML5, CSS3, Astro Framework, Static Site Generation (SSG).</li>
+        </ul>
+      </section>
+
+      <footer>
+        <hr style="border: 0; border-top: 1px solid #333;" />
+        <p>© 2025 QRLTT | <a href="mailto:me@qrltt.com">Contact Me</a></p>
+      </footer>
+    </main>
+  </body>
+</html>
