@@ -125,6 +125,17 @@ const lastUpdated = new Date().toLocaleDateString('en-US', {
           <span class="tag">Nextcloud</span>
           <span class="tag">Cloudflare Tunnel</span>
         </div>
+
+        <div class="card">
+          <h3>Project Y11</h3>
+          <p>
+            Modernization of a 2001 Nissan Y11, blending mechanical restoration
+            with planned diagnostics, sensors, and embedded systems to bridge
+            physical systems and software.
+          </p>
+          <span class="tag">Systems Thinking</span>
+          <span class="tag">Embedded Concepts</span>
+        </div>
       </section>
 
       <!-- Certifications -->
@@ -149,7 +160,7 @@ const lastUpdated = new Date().toLocaleDateString('en-US', {
 
     <footer>
       <hr style="border: 0; border-top: 1px solid #333;" />
-      <p>© 2025 QRLTT | <a href="mailto:websupport@qrltt.com">Contact</a></p>
+      <p>© 2025 QRLTT | <a href="mailto:me@qrltt.com">Contact Me</a></p>
       <p class="timestamp">Last Deployment: {lastUpdated}</p>
     </footer>
   </body>
