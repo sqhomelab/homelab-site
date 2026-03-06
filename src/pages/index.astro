@@ -1,194 +1,77 @@
 ---
-title: "QRLTT | Homelab & Resume"
+// src/pages/index.astro
 ---
 
-<style>
-  /* General Styles */
-  body {
-    background-color: #111;
-    color: #ccc;
-    font-family: 'Fira Code', monospace;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boss | Professional Portfolio</title>
+  </head>
+  <body style="margin:0; font-family:Arial,sans-serif; background-color:#111; color:#E0E0E0; line-height:1.6;">
 
-  a { text-decoration: none; }
+    <!-- Hero Section -->
+    <section id="hero" style="text-align:center; padding:6rem 2rem;">
+      <h1 style="font-size:3rem; color:#32CD32; margin-bottom:0.5rem;">Boss</h1>
+      <p style="color:#00CED1; margin-bottom:2rem;">Cloud, IoT, Smart Home, Automation</p>
+      <a href="#resume" style="padding:0.75rem 2rem; border:2px solid #32CD32; color:#32CD32; text-decoration:none; font-weight:bold; border-radius:6px;">View Resume / CV</a>
+    </section>
 
-  /* Neon text */
-  .neon {
-    color: #00FF00;
-    text-shadow:
-      0 0 5px #00FF00,
-      0 0 10px #00FF00,
-      0 0 20px #00FF00,
-      0 0 40px #0fef8f;
-  }
+    <!-- About & Skills -->
+    <section id="about" style="padding:4rem 2rem; max-width:900px; margin:auto;">
+      <h2 style="color:#32CD32; margin-bottom:1rem;">About Me</h2>
+      <p>Engineering enthusiast specializing in cloud computing, IoT, DevOps, and smart home automation. Experienced in building scalable systems, automating workflows, and implementing innovative solutions.</p>
 
-  /* Navigation Tabs */
-  nav {
-    display: flex;
-    justify-content: center;
-    gap: 3rem;
-    padding: 2rem;
-    border-bottom: 1px solid #00FF00;
-  }
-
-  nav a {
-    font-weight: bold;
-    font-size: 1.5rem;
-    transition: 0.3s;
-  }
-
-  nav a:hover {
-    text-shadow:
-      0 0 5px #00FF00,
-      0 0 10px #00FF00,
-      0 0 20px #00FF00;
-  }
-
-  /* Section Titles */
-  h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    letter-spacing: 1px;
-  }
-
-  /* Card styles */
-  .card {
-    background-color: #1a1a1a;
-    border: 2px solid #00FF00;
-    border-radius: 12px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-  }
-
-  .card:hover {
-    box-shadow:
-      0 0 15px #00FF00,
-      0 0 30px #0fef8f;
-    transform: translateY(-4px);
-  }
-
-  /* Grid layout */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-
-  /* Buttons */
-  button {
-    background-color: #000;
-    color: #00FF00;
-    border: 2px solid #00FF00;
-    padding: 0.7rem 1.5rem;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    margin-top: 1rem;
-  }
-
-  button:hover {
-    box-shadow:
-      0 0 10px #00FF00,
-      0 0 20px #0fef8f;
-    transform: scale(1.05);
-  }
-
-  /* Textarea */
-  textarea {
-    background-color: #111;
-    border: 2px solid #00FF00;
-    color: #00FF00;
-    padding: 0.75rem;
-    border-radius: 6px;
-    width: 100%;
-    font-family: 'Fira Code', monospace;
-    margin-top: 1rem;
-  }
-
-  /* Lists */
-  ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-  }
-
-  /* Section spacing */
-  section {
-    padding: 4rem 0;
-  }
-</style>
-
-<!-- Navigation -->
-<nav>
-  <a href="#homelab" class="neon">Homelab 🦁</a>
-  <a href="#resume" class="neon">Resume 🐢</a>
-</nav>
-
-<!-- Homelab Section -->
-<section id="homelab">
-  <h2 class="neon">Homelab & Cloud Projects 🦁</h2>
-  <div class="grid">
-    <div class="card">
-      <h3 class="neon">🛠 Monitoring Stack</h3>
-      <p>Prometheus, Grafana, and Uptime Kuma on GCP Ubuntu VM for remote monitoring.</p>
-    </div>
-    <div class="card">
-      <h3 class="neon">⚡ Automation & Networking</h3>
-      <p>Dockerized services, Tailscale mesh network, and secure remote access.</p>
-    </div>
-    <div class="card">
-      <h3 class="neon">🛡 Security & Utilities</h3>
-      <p>Pi-hole, CrowdSec, and Watchtower for security and auto-updates.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Resume Section -->
-<section id="resume">
-  <h2 class="neon">Resume & Personal Projects 🐢</h2>
-  <div class="grid">
-    <div class="card">
-      <h3 class="neon">About Me</h3>
-      <p>Cloud & homelab enthusiast, building observable infrastructures. Passionate about IoT, smart homes, and automation.</p>
-    </div>
-    <div class="card">
-      <h3 class="neon">Skills</h3>
-      <ul>
-        <li>Docker, Prometheus, Grafana, Uptime Kuma</li>
-        <li>Home Assistant, ESPHome, Raspberry Pi, IoT Automation</li>
-        <li>Pi-hole, CrowdSec, Watchtower, Linux Server Administration</li>
-        <li>Python, Bash scripting, Cloud experimentation (GCP/Ubuntu LTS)</li>
+      <h3 style="color:#32CD32; margin-top:2rem;">Technical Skills</h3>
+      <ul style="list-style:none; margin-top:1rem; padding:0;">
+        <li style="border:1px solid #32CD32; padding:0.5rem; margin-bottom:0.5rem; border-radius:4px; display:inline-block; margin-right:0.5rem;">Python, Bash, Linux</li>
+        <li style="border:1px solid #32CD32; padding:0.5rem; margin-bottom:0.5rem; border-radius:4px; display:inline-block; margin-right:0.5rem;">Docker, Portainer</li>
+        <li style="border:1px solid #32CD32; padding:0.5rem; margin-bottom:0.5rem; border-radius:4px; display:inline-block; margin-right:0.5rem;">AWS & GCP</li>
+        <li style="border:1px solid #32CD32; padding:0.5rem; margin-bottom:0.5rem; border-radius:4px; display:inline-block; margin-right:0.5rem;">Home Assistant, ESPHome, Zigbee</li>
+        <li style="border:1px solid #32CD32; padding:0.5rem; margin-bottom:0.5rem; border-radius:4px; display:inline-block; margin-right:0.5rem;">Networking, VLANs, Tailscale VPN</li>
+        <li style="border:1px solid #32CD32; padding:0.5rem; margin-bottom:0.5rem; border-radius:4px; display:inline-block;">Monitoring: Grafana, Prometheus, Kuma</li>
       </ul>
-    </div>
-    <div class="card" style="grid-column: span 2;">
-      <h3 class="neon">ML Resume Assistant</h3>
-      <textarea id="experienceInput" rows="3" placeholder="Paste your experience here..."></textarea>
-      <button id="suggestSkills">Suggest Skills</button>
-      <div id="suggestedSkills" class="neon font-medium"></div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<script type="module">
-  const button = document.getElementById('suggestSkills');
-  const input = document.getElementById('experienceInput');
-  const output = document.getElementById('suggestedSkills');
-  button.addEventListener('click', () => {
-    const text = input.value.toLowerCase();
-    const skills = [];
-    if(text.includes('docker')) skills.push('Docker');
-    if(text.includes('prometheus')) skills.push('Prometheus');
-    if(text.includes('grafana')) skills.push('Grafana');
-    if(text.includes('home assistant')) skills.push('Home Assistant');
-    if(text.includes('python')) skills.push('Python');
-    if(text.includes('gcp')) skills.push('GCP');
-    output.textContent = skills.length ? 'Suggested Skills: ' + skills.join(', ') : 'No skills detected';
-  });
-</script>
+    <!-- Experience / Projects -->
+    <section id="experience" style="padding:4rem 2rem;">
+      <h2 style="color:#32CD32; text-align:center;">Experience & Projects</h2>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:2rem; margin-top:2rem; max-width:1000px; margin:auto;">
+
+        <div style="border:1px solid #32CD32; padding:1.5rem; border-radius:8px;">
+          <h3>Smart Home Automation</h3>
+          <p>Local-first Home Assistant system integrating Zigbee, ESPHome, and IR devices. Focus on automation, energy efficiency, and maintainable architecture.</p>
+        </div>
+
+        <div style="border:1px solid #32CD32; padding:1.5rem; border-radius:8px;">
+          <h3>Cloud Lab</h3>
+          <p>GCP Debian VMs with Docker, Portainer, monitoring stacks (Grafana + Kuma), and Tailscale VPN access for secure experiments.</p>
+        </div>
+
+        <div style="border:1px solid #32CD32; padding:1.5rem; border-radius:8px;">
+          <h3>Vehicle Camera System</h3>
+          <p>Integrated blind spot, reverse, and IR front-facing cameras with remote ignition starter and system monitoring.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Resume / CV -->
+    <section id="resume" style="padding:4rem 2rem; text-align:center;">
+      <h2 style="color:#32CD32;">Resume / CV</h2>
+      <p>Download my full professional resume for detailed experience, certifications, and projects:</p>
+      <a href="/files/Boss_Resume.pdf" style="padding:0.75rem 2rem; border:2px solid #32CD32; color:#32CD32; text-decoration:none; font-weight:bold; border-radius:6px;">Download PDF</a>
+    </section>
+
+    <!-- Footer -->
+    <footer style="text-align:center; padding:2rem; border-top:1px solid #32CD32; margin-top:4rem;">
+      <p>Last updated: Mar 5, 2026</p>
+      <div>
+        <a href="https://github.com/sqhomelab" target="_blank" style="color:#32CD32; margin:0 1rem; text-decoration:none;">GitHub</a>
+        <a href="https://www.linkedin.com/in/yourusername" target="_blank" style="color:#32CD32; margin:0 1rem; text-decoration:none;">LinkedIn</a>
+        <a href="mailto:email@example.com" style="color:#32CD32; margin:0 1rem; text-decoration:none;">Email</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
