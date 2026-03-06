@@ -1,74 +1,194 @@
 ---
-title: "QRLTT | Portfolio & Homelab"
+title: "QRLTT | Homelab & Resume"
 ---
 
-<!-- Navigation Tabs -->
-<nav class="bg-gray-800 text-white p-4 flex justify-center gap-6">
-  <a href="#homelab" class="hover:text-blue-400 font-semibold">Homelab 🦁</a>
-  <a href="#resume" class="hover:text-green-400 font-semibold">Resume 🐢</a>
+<style>
+  /* General Styles */
+  body {
+    background-color: #111;
+    color: #ccc;
+    font-family: 'Fira Code', monospace;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  a { text-decoration: none; }
+
+  /* Neon text */
+  .neon {
+    color: #00FF00;
+    text-shadow:
+      0 0 5px #00FF00,
+      0 0 10px #00FF00,
+      0 0 20px #00FF00,
+      0 0 40px #0fef8f;
+  }
+
+  /* Navigation Tabs */
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem;
+    border-bottom: 1px solid #00FF00;
+  }
+
+  nav a {
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    text-shadow:
+      0 0 5px #00FF00,
+      0 0 10px #00FF00,
+      0 0 20px #00FF00;
+  }
+
+  /* Section Titles */
+  h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+
+  /* Card styles */
+  .card {
+    background-color: #1a1a1a;
+    border: 2px solid #00FF00;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow:
+      0 0 15px #00FF00,
+      0 0 30px #0fef8f;
+    transform: translateY(-4px);
+  }
+
+  /* Grid layout */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  /* Buttons */
+  button {
+    background-color: #000;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    padding: 0.7rem 1.5rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+  }
+
+  button:hover {
+    box-shadow:
+      0 0 10px #00FF00,
+      0 0 20px #0fef8f;
+    transform: scale(1.05);
+  }
+
+  /* Textarea */
+  textarea {
+    background-color: #111;
+    border: 2px solid #00FF00;
+    color: #00FF00;
+    padding: 0.75rem;
+    border-radius: 6px;
+    width: 100%;
+    font-family: 'Fira Code', monospace;
+    margin-top: 1rem;
+  }
+
+  /* Lists */
+  ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+
+  /* Section spacing */
+  section {
+    padding: 4rem 0;
+  }
+</style>
+
+<!-- Navigation -->
+<nav>
+  <a href="#homelab" class="neon">Homelab 🦁</a>
+  <a href="#resume" class="neon">Resume 🐢</a>
 </nav>
 
 <!-- Homelab Section -->
-<section id="homelab" class="my-12 px-6">
-  <h2 class="text-3xl font-bold mb-6 text-center">Homelab & Cloud Experiments 🦁</h2>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2">🛠 Monitoring Stack</h3>
-      <p class="text-gray-700 mb-2">Prometheus, Grafana, Uptime Kuma on GCP Ubuntu VM for remote monitoring.</p>
-      <p class="text-gray-500 text-sm">Tracks uptime, CPU/RAM, disk, and container health.</p>
+<section id="homelab">
+  <h2 class="neon">Homelab & Cloud Projects 🦁</h2>
+  <div class="grid">
+    <div class="card">
+      <h3 class="neon">🛠 Monitoring Stack</h3>
+      <p>Prometheus, Grafana, and Uptime Kuma on GCP Ubuntu VM for remote monitoring.</p>
     </div>
-
-    <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2">⚡ Homelab Automation</h3>
-      <p class="text-gray-700 mb-2">Dockerized services with Tailscale for a secure private mesh network.</p>
+    <div class="card">
+      <h3 class="neon">⚡ Automation & Networking</h3>
+      <p>Dockerized services, Tailscale mesh network, and secure remote access.</p>
     </div>
-
-    <div class="p-6 bg-white rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold mb-2">🛡 Security & Utilities</h3>
-      <p class="text-gray-700 mb-2">Pi-hole, CrowdSec, Watchtower — automating security and updates.</p>
+    <div class="card">
+      <h3 class="neon">🛡 Security & Utilities</h3>
+      <p>Pi-hole, CrowdSec, and Watchtower for security and auto-updates.</p>
     </div>
   </div>
 </section>
 
 <!-- Resume Section -->
-<section id="resume" class="my-12 px-6 bg-gray-100 py-12 rounded-xl">
-  <h2 class="text-3xl font-bold mb-6 text-center">Resume & Personal Projects 🐢</h2>
-
-  <div class="max-w-3xl mx-auto">
-    <h3 class="text-xl font-semibold mb-2">About Me</h3>
-    <p class="mb-4">Cloud & Homelab enthusiast, building automated and observable infrastructures. Passionate about IoT, robotics, and smart home integration.</p>
-
-    <h3 class="text-xl font-semibold mb-2">Skills</h3>
-    <ul class="list-disc list-inside mb-4">
-      <li>Docker, Prometheus, Grafana, Uptime Kuma, Tailscale</li>
-      <li>Home Assistant, ESPHome, Raspberry Pi, IoT Automation</li>
-      <li>Pi-hole, CrowdSec, Watchtower, Linux Server Administration</li>
-      <li>Python, Bash scripting, Cloud experimentation (GCP/Ubuntu LTS)</li>
-    </ul>
-
-    <h3 class="text-xl font-semibold mb-2">Interactive ML Resume Assistant</h3>
-    <p class="mb-2">Test out skill suggestions based on your experience:</p>
-    <textarea id="experienceInput" class="w-full p-2 border rounded mb-2" rows="3" placeholder="Paste your experience here..."></textarea>
-    <button id="suggestSkills" class="bg-blue-500 text-white px-4 py-2 rounded mb-4 hover:bg-blue-600">Suggest Skills</button>
-    <div id="suggestedSkills" class="text-gray-700 font-medium"></div>
-
-    <script type="module">
-      const button = document.getElementById('suggestSkills');
-      const input = document.getElementById('experienceInput');
-      const output = document.getElementById('suggestedSkills');
-
-      button.addEventListener('click', () => {
-        const text = input.value.toLowerCase();
-        const skills = [];
-        if(text.includes('docker')) skills.push('Docker');
-        if(text.includes('prometheus')) skills.push('Prometheus');
-        if(text.includes('grafana')) skills.push('Grafana');
-        if(text.includes('home assistant')) skills.push('Home Assistant');
-        if(text.includes('python')) skills.push('Python');
-        if(text.includes('gcp')) skills.push('GCP');
-        output.textContent = skills.length ? 'Suggested Skills: ' + skills.join(', ') : 'No skills detected';
-      });
-    </script>
+<section id="resume">
+  <h2 class="neon">Resume & Personal Projects 🐢</h2>
+  <div class="grid">
+    <div class="card">
+      <h3 class="neon">About Me</h3>
+      <p>Cloud & homelab enthusiast, building observable infrastructures. Passionate about IoT, smart homes, and automation.</p>
+    </div>
+    <div class="card">
+      <h3 class="neon">Skills</h3>
+      <ul>
+        <li>Docker, Prometheus, Grafana, Uptime Kuma</li>
+        <li>Home Assistant, ESPHome, Raspberry Pi, IoT Automation</li>
+        <li>Pi-hole, CrowdSec, Watchtower, Linux Server Administration</li>
+        <li>Python, Bash scripting, Cloud experimentation (GCP/Ubuntu LTS)</li>
+      </ul>
+    </div>
+    <div class="card" style="grid-column: span 2;">
+      <h3 class="neon">ML Resume Assistant</h3>
+      <textarea id="experienceInput" rows="3" placeholder="Paste your experience here..."></textarea>
+      <button id="suggestSkills">Suggest Skills</button>
+      <div id="suggestedSkills" class="neon font-medium"></div>
+    </div>
   </div>
 </section>
+
+<script type="module">
+  const button = document.getElementById('suggestSkills');
+  const input = document.getElementById('experienceInput');
+  const output = document.getElementById('suggestedSkills');
+  button.addEventListener('click', () => {
+    const text = input.value.toLowerCase();
+    const skills = [];
+    if(text.includes('docker')) skills.push('Docker');
+    if(text.includes('prometheus')) skills.push('Prometheus');
+    if(text.includes('grafana')) skills.push('Grafana');
+    if(text.includes('home assistant')) skills.push('Home Assistant');
+    if(text.includes('python')) skills.push('Python');
+    if(text.includes('gcp')) skills.push('GCP');
+    output.textContent = skills.length ? 'Suggested Skills: ' + skills.join(', ') : 'No skills detected';
+  });
+</script>
